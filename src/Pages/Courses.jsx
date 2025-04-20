@@ -1,4 +1,5 @@
 import CoursesCard from '../Components/CoursesCard';
+import NoResults from '../Components/NoResults';
 import data from '../data.json';
 import useSearchStore from '../store/useSearchStore';
 import classes from '../Styles/courses.module.css';
@@ -17,16 +18,20 @@ const Courses = () => {
   };
   return (
     <div className={classes.courses}>
-      {filteredCourses.map((topic, index) => (
-        <CoursesCard
-          key={index}
-          cover_image={topic.cover_image}
-          description={topic.description}
-          name={topic.name}
-          id={topic.id}
-          onClick={handleCourseClick}
-        />
-      ))}
+      {filteredCourses.length > 0 ? (
+        filteredCourses.map((topic, index) => (
+          <CoursesCard
+            key={index}
+            cover_image={topic.cover_image}
+            description={topic.description}
+            name={topic.name}
+            id={topic.id}
+            onClick={handleCourseClick}
+          />
+        ))
+      ) : (
+        <NoResults />
+      )}
     </div>
   );
 };

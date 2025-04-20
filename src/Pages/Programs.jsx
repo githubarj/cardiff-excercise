@@ -7,6 +7,7 @@ import { Flex } from '@mantine/core';
 import useSearchStore from '../store/useSearchStore';
 import useLocationStore from '../store/useLocationStore';
 import useTimeStore from '../store/useTimeStore';
+import NoResults from '../Components/NoResults';
 
 const Programs = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ const Programs = () => {
   const goBack = () => {
     setSearchQuery('');
     setLocationFilter([]);
-    setTimeQuery(null)
+    setTimeQuery(null);
     navigate(-1);
   };
 
@@ -37,23 +38,23 @@ const Programs = () => {
         ? locationFilter.every((feature) => program.location[feature] === 1)
         : true;
 
-     const matchesTimeQuery = timeQuery
-       ? (() => {
-           const programStartTime = new Date(program.start_time);
-           const filterTime = timeQuery.split(':');
+    const matchesTimeQuery = timeQuery
+      ? (() => {
+          const programStartTime = new Date(program.start_time);
+          const filterTime = timeQuery.split(':');
 
-           const programHours = programStartTime.getHours();
-           const programMinutes = programStartTime.getMinutes();
+          const programHours = programStartTime.getHours();
+          const programMinutes = programStartTime.getMinutes();
 
-           const filterHours = parseInt(filterTime[0], 10);
-           const filterMinutes = parseInt(filterTime[1], 10);
+          const filterHours = parseInt(filterTime[0], 10);
+          const filterMinutes = parseInt(filterTime[1], 10);
 
-           return (
-             programHours > filterHours ||
-             (programHours === filterHours && programMinutes >= filterMinutes)
-           );
-         })()
-       : true;
+          return (
+            programHours > filterHours ||
+            (programHours === filterHours && programMinutes >= filterMinutes)
+          );
+        })()
+      : true;
 
     return matchesSearchQuery && matchesLocationFilter && matchesTimeQuery;
   });
@@ -68,9 +69,13 @@ const Programs = () => {
         />{' '}
         <h1>{course}</h1>
       </Flex>
-      {filteredPrograms.map((program, index) => (
-        <ProgramCard key={index} {...program} />
-      ))}
+      {filteredPrograms.length > 0 ? (
+        filteredPrograms.map((program, index) => (
+          <ProgramCard key={index} {...program} />
+        ))
+      ) : (
+        <NoResults />
+      )}
     </div>
   );
 };
