@@ -1,12 +1,72 @@
-# React + Vite
+ Built with React, Mantine, and Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Link](https://cardiff-open-day.netlify.app/Courses)
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Follow these instructions to set up the project on your local machine for development and testing purposes.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- **Node.js** (version 18 or higher): [Download Node.js](https://nodejs.org/)
+- **Yarn** (latest stable version): [Download Yarn](https://yarnpkg.com/)
+
+---
+
+## Installation
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/githubarj/cardiff-excercise
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd cardiff-exercise
+   ```
+
+3. Install dependencies using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+---
+
+## Development Server
+
+To run the application locally:
+
+1. Start the development server:
+
+   ```bash
+   yarn dev
+   ```
+
+2. Open your browser and navigate to:
+
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## Dependencies
+
+This project uses the following key libraries:
+
+- **React** for building the user interface.
+- **Mantine** for UI components.
+- **React Router DOM** for routing.
+- **Zustand** for state management.
+- **Vite** as the build tool.
+
+For a complete list of dependencies, refer to the `package.json` file.
+
+---
