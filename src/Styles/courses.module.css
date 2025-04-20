@@ -1,0 +1,23 @@
+
+.title {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+
+
+.footer {
+  margin-top: 10px;
+  justify-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
