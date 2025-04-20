@@ -1,4 +1,4 @@
-[Live Link](https://cardiff-open-day.netlify.app/Courses) - You can view a live version of the excercise here
+[Live Link](https://cardiff-open-day.netlify.app/) - You can view a live version of the excercise here
 
 ## Getting Started
 
