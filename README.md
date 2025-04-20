@@ -1,10 +1,8 @@
- Built with React, Mantine, and Vite.
-
-[Live Link](https://cardiff-open-day.netlify.app/Courses)
+[Live Link](https://cardiff-open-day.netlify.app/Courses) - You can view a live version of the excercise here
 
 ## Getting Started
 
-Follow these instructions to set up the project on your local machine for development and testing purposes.
+Follow these instructions to set up the project on your local machine.
 
 ---
 
